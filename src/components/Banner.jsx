@@ -4,7 +4,7 @@ import tenis from "../assets/tenis.png";
 const Carrousel = () => {
   return (
     <>
-      <div id="banner">
+      <section id="banner">
         <div className="conteudo">
           <h6>Melhores ofertas personalizadas</h6>
           <h2>
@@ -23,7 +23,7 @@ const Carrousel = () => {
         </div>
         <img src={tenis} alt="" className="tenis" />
         <img src={brilhinho} alt="" className="detalhe" />
-      </div>
+      </section>
     </>
   );
 };

@@ -1,7 +1,7 @@
-import Carrousel from "./components/Carrousel";
+import Banner from "./components/Banner";
 import Destaques from "./components/Destaques";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Header from "./components/header";
 import OfertaEspecial from "./components/OfertaEspecial";
 import Produtos from "./components/Produtos";
 import "./index.css";
@@ -9,11 +9,13 @@ function App() {
   return (
     <>
       <Header />
-      <Carrousel />
-      <Destaques />
-      <Produtos />
-      <OfertaEspecial />
-      <Footer />
+      <main>
+        <Banner />
+        <Destaques />
+        <Produtos />
+        <OfertaEspecial />
+        <Footer />
+      </main>
     </>
   );
 }

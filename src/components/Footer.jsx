@@ -18,7 +18,7 @@ const Footer = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore.
             </p>
-            <div className="social-midias">
+            <div className="social-midias flex">
               <a href="">
                 <img src={face} alt="" />
               </a>

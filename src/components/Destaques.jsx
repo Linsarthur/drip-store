@@ -10,7 +10,7 @@ import sapato from "../assets/sapato.png";
 const Destaques = () => {
   return (
     <>
-      <div id="destaques">
+      <section id="destaques">
         <h3>Coleções em destaque</h3>
         <div className="colecoes">
           <div>
@@ -89,7 +89,7 @@ const Destaques = () => {
             Tênis
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

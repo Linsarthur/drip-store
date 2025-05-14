@@ -3,12 +3,12 @@ import jordans from "../assets/jordans.png";
 const OfertaEspecial = () => {
   return (
     <>
-      <div id="special-offer">
+      <section id="special-offer">
         <div className="container-special circle">
           <div className="imagem-destaque">
             <img src={jordans} alt="tênis jordans" />
           </div>
-          <div className="texto-secao">
+          <div className="texto-secao flex-1">
             <h6>Oferta especial</h6>
             <h2>Air Jordan edição de colecionador</h2>
             <p>
@@ -22,7 +22,7 @@ const OfertaEspecial = () => {
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

@@ -3,10 +3,10 @@ import productExample from "../assets/product-example.png";
 const Produtos = () => {
   return (
     <>
-      <div id="produtos">
+      <section id="produtos">
         <div className="titulo">
           <h3>Produtos em alta</h3>
-          <a href="">
+          <a href="#">
             Ver todos <img src={line} alt="" />
           </a>
         </div>
@@ -110,7 +110,7 @@ const Produtos = () => {
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
