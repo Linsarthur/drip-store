@@ -2,7 +2,7 @@ import carrinho from "../assets/carrinho.png";
 import logo from "../assets/logo.png";
 import lupa from "../assets/lupa.png";
 
-const Header = () => {
+const HeaderNav = () => {
   return (
     <>
       <header>
@@ -27,7 +27,7 @@ const Header = () => {
           </div>
         </div>
         <nav>
-          <a href="" className="active">
+          <a href="/" className="active">
             Home
           </a>
           <a href="/produtos">Produtos</a>
@@ -39,4 +39,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderNav;

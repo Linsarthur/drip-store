@@ -2,7 +2,7 @@ import line from "../assets/Line.png";
 import productExample from "../assets/product-example.png";
 const Produtos = () => {
   return (
-    <>
+    <main>
       <section id="produtos">
         <div className="titulo">
           <h3>Produtos em alta</h3>
@@ -111,7 +111,7 @@ const Produtos = () => {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 };
 
