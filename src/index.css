@@ -9,15 +9,14 @@
   --color-grafite: #474747;
   --color-amarelo: #F6AA1C;
   --color-cinza-claro: #CCCCCC;
-
+  --color-abacate: #E7FF86;
+  --color-cinza-claro: #8F8F8F;
 }
 
 
 * {
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  text-decoration: none;
-
 }
 
 hr {

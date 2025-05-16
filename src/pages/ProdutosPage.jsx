@@ -1,3 +1,5 @@
+import ProdutosSection from "../components/ProdutosSection";
+
 const ProdutosPage = () => {
   return (
     <div className="xl:px-[100px] xl:pt-[40px] xl:pb-[140px] bg-[#F9F8FE]">
@@ -21,7 +23,7 @@ const ProdutosPage = () => {
           <h5 className="font-bold text-grafite">Filtrar por</h5>
           <div className="h-[1px] bg-cinza-claro my-[20px]" />
           <h6 className="mb-[10px] font-bold text-grafite">Marca</h6>
-          <div className="grid gap-[10px]">
+          <div className="grid gap-[10px] mb-[20px]">
             <label className="flex gap-[10px] items-center">
               <input
                 type="checkbox"
@@ -51,7 +53,81 @@ const ProdutosPage = () => {
               Puma
             </label>
           </div>
+          <h6 className="mb-[10px] font-bold text-grafite">Categoria</h6>
+          <div className="grid gap-[10px] mb-[20px]">
+            <label className="flex gap-[10px] items-center">
+              <input
+                type="checkbox"
+                className="w-[22px] h-[22px] accent-rosa"
+              />
+              Esporte e Lazer
+            </label>
+            <label className="flex gap-[10px] items-center">
+              <input
+                type="checkbox"
+                className="w-[22px] h-[22px] accent-rosa"
+              />
+              Casual
+            </label>
+            <label className="flex gap-[10px] items-center">
+              <input
+                type="checkbox"
+                className="w-[22px] h-[22px] accent-rosa"
+              />
+              Utilitário
+            </label>
+            <label className="flex gap-[10px] items-center">
+              <input
+                type="checkbox"
+                className="w-[22px] h-[22px] accent-rosa"
+              />
+              Corrida
+            </label>
+          </div>
+          <h6 className="mb-[10px] font-bold text-grafite">Gênero</h6>
+          <div className="grid gap-[10px] mb-[20px]">
+            <label className="flex gap-[10px] items-center">
+              <input
+                type="checkbox"
+                className="w-[22px] h-[22px] accent-rosa"
+              />
+              Masculino
+            </label>
+            <label className="flex gap-[10px] items-center">
+              <input
+                type="checkbox"
+                className="w-[22px] h-[22px] accent-rosa"
+              />
+              Feminino
+            </label>
+            <label className="flex gap-[10px] items-center">
+              <input
+                type="checkbox"
+                className="w-[22px] h-[22px] accent-rosa"
+              />
+              Unissex
+            </label>
+            <label className="flex gap-[10px] items-center">
+              <input
+                type="checkbox"
+                className="w-[22px] h-[22px] accent-rosa"
+              />
+              Corrida
+            </label>
+          </div>
+          <h6 className="mb-[10px] font-bold text-grafite">Estado</h6>
+          <div className="grid gap-[10px] mb-[20px]">
+            <label className="flex gap-[10px] items-center">
+              <input type="radio" className="w-[22px] h-[22px] accent-rosa" />
+              Novo
+            </label>
+            <label className="flex gap-[10px] items-center">
+              <input type="radio" className="w-[22px] h-[22px] accent-rosa" />
+              Usado
+            </label>
+          </div>
         </div>
+        <ProdutosSection />
       </div>
     </div>
   );
