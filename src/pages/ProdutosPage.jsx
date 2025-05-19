@@ -1,6 +1,58 @@
+import { useState } from "react";
 import ProdutosSection from "../components/ProdutosSection";
 
 const ProdutosPage = () => {
+  const [filtroMarca, setfiltroMarca] = useState([]);
+  const [filtroCategoria, setfiltroCategoria] = useState([]);
+  const [filtroGenero, setfiltroGenero] = useState([]);
+  const [filtroEstado, setfiltroEstado] = useState("Novo");
+
+  function verificarMarca(marca) {
+    if (filtroMarca.includes(marca)) {
+      setfiltroMarca([
+        ...filtroMarca.filter((cadaMarca) => cadaMarca != marca),
+      ]);
+    } else {
+      setfiltroMarca([...filtroMarca, marca]);
+    }
+  }
+
+  function verificarCategoria(categoria) {
+    if (filtroCategoria.includes(categoria)) {
+      setfiltroCategoria([
+        ...filtroCategoria.filter(
+          (cadaCategoria) => cadaCategoria != categoria
+        ),
+      ]);
+    } else {
+      setfiltroCategoria([...filtroCategoria, categoria]);
+    }
+  }
+
+  function verificarGenero(genero) {
+    if (filtroGenero.includes(genero)) {
+      setfiltroGenero([
+        ...filtroGenero.filter((cadaGenero) => cadaGenero != genero),
+      ]);
+    } else {
+      setfiltroGenero([...filtroCategoria, genero]);
+    }
+  }
+  function verificarEstado(estado) {
+    if (filtroEstado.includes(estado)) {
+      setfiltroEstado([
+        ...filtroEstado.filter((cadaEstado) => cadaEstado != estado),
+      ]);
+    } else {
+      setfiltroEstado([...filtroEstado, estado]);
+    }
+  }
+
+  console.log(filtroMarca);
+  console.log(filtroCategoria);
+  console.log(filtroGenero);
+  console.log(filtroEstado);
+
   return (
     <div className="xl:px-[100px] xl:pt-[40px] xl:pb-[140px] bg-[#F9F8FE]">
       {/* Ordenação */}
@@ -21,13 +73,14 @@ const ProdutosPage = () => {
         {/* Filtros */}
         <div className="w-[300px] bg-white rounded p-[30px]">
           <h5 className="font-bold text-grafite">Filtrar por</h5>
-          <div className="h-[1px] bg-cinza-claro my-[20px]" />
+          <div className="h-[1px] bg-cinza my-[20px]" />
           <h6 className="mb-[10px] font-bold text-grafite">Marca</h6>
-          <div className="grid gap-[10px] mb-[20px]">
+          <div className="grid gap-[10px] mb-5">
             <label className="flex gap-[10px] items-center">
               <input
                 type="checkbox"
                 className="w-[22px] h-[22px] accent-rosa"
+                onChange={() => verificarMarca("Adidas")}
               />
               Adidas
             </label>
@@ -35,6 +88,7 @@ const ProdutosPage = () => {
               <input
                 type="checkbox"
                 className="w-[22px] h-[22px] accent-rosa"
+                onChange={() => verificarMarca("Balenciaga")}
               />
               Balenciaga
             </label>
@@ -42,6 +96,7 @@ const ProdutosPage = () => {
               <input
                 type="checkbox"
                 className="w-[22px] h-[22px] accent-rosa"
+                onChange={() => verificarMarca("Nike")}
               />
               Nike
             </label>
@@ -49,16 +104,18 @@ const ProdutosPage = () => {
               <input
                 type="checkbox"
                 className="w-[22px] h-[22px] accent-rosa"
+                onChange={() => verificarMarca("Puma")}
               />
               Puma
             </label>
           </div>
           <h6 className="mb-[10px] font-bold text-grafite">Categoria</h6>
-          <div className="grid gap-[10px] mb-[20px]">
+          <div className="grid gap-[10px] mb-5">
             <label className="flex gap-[10px] items-center">
               <input
                 type="checkbox"
                 className="w-[22px] h-[22px] accent-rosa"
+                onChange={() => verificarCategoria("Esporte e Lazer")}
               />
               Esporte e Lazer
             </label>
@@ -66,6 +123,7 @@ const ProdutosPage = () => {
               <input
                 type="checkbox"
                 className="w-[22px] h-[22px] accent-rosa"
+                onChange={() => verificarCategoria("Casual")}
               />
               Casual
             </label>
@@ -73,6 +131,7 @@ const ProdutosPage = () => {
               <input
                 type="checkbox"
                 className="w-[22px] h-[22px] accent-rosa"
+                onChange={() => verificarCategoria("Utilitário")}
               />
               Utilitário
             </label>
@@ -80,16 +139,18 @@ const ProdutosPage = () => {
               <input
                 type="checkbox"
                 className="w-[22px] h-[22px] accent-rosa"
+                onChange={() => verificarCategoria("Corrida")}
               />
               Corrida
             </label>
           </div>
           <h6 className="mb-[10px] font-bold text-grafite">Gênero</h6>
-          <div className="grid gap-[10px] mb-[20px]">
+          <div className="grid gap-[10px] mb-5">
             <label className="flex gap-[10px] items-center">
               <input
                 type="checkbox"
                 className="w-[22px] h-[22px] accent-rosa"
+                onChange={() => verificarGenero("Masculino")}
               />
               Masculino
             </label>
@@ -97,6 +158,7 @@ const ProdutosPage = () => {
               <input
                 type="checkbox"
                 className="w-[22px] h-[22px] accent-rosa"
+                onChange={() => verificarGenero("Feminino")}
               />
               Feminino
             </label>
@@ -104,30 +166,38 @@ const ProdutosPage = () => {
               <input
                 type="checkbox"
                 className="w-[22px] h-[22px] accent-rosa"
+                onChange={() => verificarGenero("Unissex")}
               />
               Unissex
             </label>
-            <label className="flex gap-[10px] items-center">
-              <input
-                type="checkbox"
-                className="w-[22px] h-[22px] accent-rosa"
-              />
-              Corrida
-            </label>
           </div>
           <h6 className="mb-[10px] font-bold text-grafite">Estado</h6>
-          <div className="grid gap-[10px] mb-[20px]">
+          <div className="grid gap-[10px] mb-5">
             <label className="flex gap-[10px] items-center">
-              <input type="radio" className="w-[22px] h-[22px] accent-rosa" />
+              <input
+                type="radio"
+                className="w-[22px] h-[22px] accent-rosa"
+                onChange={() => verificarEstado("Novo")}
+              />
               Novo
             </label>
             <label className="flex gap-[10px] items-center">
-              <input type="radio" className="w-[22px] h-[22px] accent-rosa" />
+              <input
+                type="radio"
+                className="w-[22px] h-[22px] accent-rosa"
+                onChange={() => verificarEstado("Usado")}
+              />
               Usado
             </label>
           </div>
         </div>
-        <ProdutosSection />
+        <div className="grid grid-cols-3 gap-[14px]">
+          <ProdutosSection />
+          <ProdutosSection />
+          <ProdutosSection />
+          <ProdutosSection />
+          <ProdutosSection />
+        </div>
       </div>
     </div>
   );
