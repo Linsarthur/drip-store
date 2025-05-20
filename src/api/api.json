@@ -1,0 +1,64 @@
+{
+    "produtos": [
+        {
+            "id": 1,
+            "nome": "Aquele tênis lá",
+            "categoria": "Esportivo",
+            "preco": 599.6,
+            "desconto": 30,
+            "marca": "Adidas",
+            "genero": "Masculino",
+            "estado": "Novo"
+        },
+        {
+            "id": 2,
+            "nome": "Aquele outro Tênis massa",
+            "categoria": "Casual",
+            "preco": 0,
+            "desconto": 30,
+            "marca": "Balenciaga",
+            "genero": "Feminino",
+            "estado": "Novo"
+        },
+        {
+            "id": 3,
+            "nome": "Aquele não sei o que jordan",
+            "categoria": "Utilitário",
+            "preco": 159.99,
+            "desconto": 30,
+            "marca": "Nike",
+            "genero": "Masculino",
+            "estado": "Usado"
+        },
+        {
+            "id": 4,
+            "nome": "K-Swiss V8 - Masculino",
+            "categoria": "Corrida",
+            "preco": 20,
+            "desconto": 30,
+            "marca": "Puma",
+            "genero": "Unissex",
+            "estado": "Novo"
+        },
+        {
+            "id": 5,
+            "nome": "K-Swiss V8 - Masculino",
+            "categoria": "Esportivo",
+            "preco": 500,
+            "desconto": 30,
+            "marca": "Adidas",
+            "genero": "Masculino",
+            "estado": "Novo"
+        },
+        {
+            "id": 6,
+            "nome": "K-Swiss V8 - Masculino",
+            "categoria": "Esportivo",
+            "preco": 300,
+            "desconto": 30,
+            "marca": "Adidas",
+            "genero": "Masculino",
+            "estado": "Novo"
+        }
+    ]
+}

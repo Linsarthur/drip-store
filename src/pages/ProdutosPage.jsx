@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProdutosSection from "../components/ProdutosSection";
+import { AXIOS } from "../services";
 
 const ProdutosPage = () => {
   const [filtroMarca, setfiltroMarca] = useState([]);
   const [filtroCategoria, setfiltroCategoria] = useState([]);
   const [filtroGenero, setfiltroGenero] = useState([]);
-  const [filtroEstado, setfiltroEstado] = useState("");
+  const [filtroEstado, setfiltroEstado] = useState("Novo");
+  const [produtos, setProdutos] = useState([]);
+  
 
   function verificarMarca(marca) {
     if (filtroMarca.includes(marca)) {
@@ -39,16 +42,19 @@ const ProdutosPage = () => {
     }
   }
 
-  function verificarEstado(estado) {
-    if (filtroEstado.includes(estado)) {
-      setfiltroEstado([
-        ...filtroEstado.filter((cadaEstado) => cadaEstado != estado),
-      ]);
-    } else {
-      setfiltroEstado([...filtroEstado, estado]);
+  async function buscarProdutos() {
+    try {
+      const response = await AXIOS.get("/produtos");
+      setProdutos(response.data);
+    } catch (error) {
+      alert(error.message);
     }
   }
-
+  console.log(produtos);
+  
+  useEffect(() => {
+    buscarProdutos();
+  }, []);
 
   return (
     <div className="xl:px-[100px] xl:pt-[40px] xl:pb-[140px] bg-[#F9F8FE]">
@@ -172,27 +178,29 @@ const ProdutosPage = () => {
           <div className="grid gap-[10px] mb-5">
             <label className="flex gap-[10px] items-center">
               <input
-                name="estado"
                 type="radio"
-                value={"Novo"}
                 className="w-[22px] h-[22px] accent-rosa"
-                onChange={() => verificarEstado("Novo")}
+                onChange={() => setfiltroEstado("Novo")}
+                checked={filtroEstado == "Novo"}
               />
               Novo
             </label>
             <label className="flex gap-[10px] items-center">
               <input
-                name="estado"
                 type="radio"
                 className="w-[22px] h-[22px] accent-rosa"
-                onChange={() => verificarEstado("Usado")}
+                onChange={() => setfiltroEstado("Usado")}
+                checked={filtroEstado == "Usado"}
               />
               Usado
             </label>
           </div>
         </div>
         <div className="grid grid-cols-3 gap-[14px]">
-          <ProdutosSection />
+          {produtos.length > 0 &&
+            produtos.map((produto) => (
+              <ProdutosSection {...produto} />
+            ))}
         </div>
       </div>
     </div>
