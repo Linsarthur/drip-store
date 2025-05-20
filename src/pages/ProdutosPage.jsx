@@ -5,7 +5,7 @@ const ProdutosPage = () => {
   const [filtroMarca, setfiltroMarca] = useState([]);
   const [filtroCategoria, setfiltroCategoria] = useState([]);
   const [filtroGenero, setfiltroGenero] = useState([]);
-  const [filtroEstado, setfiltroEstado] = useState("Novo");
+  const [filtroEstado, setfiltroEstado] = useState("");
 
   function verificarMarca(marca) {
     if (filtroMarca.includes(marca)) {
@@ -38,6 +38,7 @@ const ProdutosPage = () => {
       setfiltroGenero([...filtroCategoria, genero]);
     }
   }
+
   function verificarEstado(estado) {
     if (filtroEstado.includes(estado)) {
       setfiltroEstado([
@@ -175,7 +176,9 @@ const ProdutosPage = () => {
           <div className="grid gap-[10px] mb-5">
             <label className="flex gap-[10px] items-center">
               <input
+                name="estado"
                 type="radio"
+                value={"Novo"}
                 className="w-[22px] h-[22px] accent-rosa"
                 onChange={() => verificarEstado("Novo")}
               />
@@ -183,6 +186,7 @@ const ProdutosPage = () => {
             </label>
             <label className="flex gap-[10px] items-center">
               <input
+                name="estado"
                 type="radio"
                 className="w-[22px] h-[22px] accent-rosa"
                 onChange={() => verificarEstado("Usado")}
@@ -192,10 +196,6 @@ const ProdutosPage = () => {
           </div>
         </div>
         <div className="grid grid-cols-3 gap-[14px]">
-          <ProdutosSection />
-          <ProdutosSection />
-          <ProdutosSection />
-          <ProdutosSection />
           <ProdutosSection />
         </div>
       </div>
