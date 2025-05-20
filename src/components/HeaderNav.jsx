@@ -1,8 +1,10 @@
+import { useState } from "react";
 import carrinho from "../assets/carrinho.png";
 import logo from "../assets/logo.png";
 import lupa from "../assets/lupa.png";
 
 const HeaderNav = () => {
+  const [ativo, setAtivo] = useState("Home")
   return (
     <>
       <header>
@@ -27,10 +29,10 @@ const HeaderNav = () => {
           </div>
         </div>
         <nav>
-          <a href="/" className="active">
+          <a href="/" >
             Home
           </a>
-          <a href="/produtos">Produtos</a>
+          <a className="active" href="/produtos">Produtos</a>
           <a href="/categorias">Categorias</a>
           <a href="/meus-pedidos">Meus Pedidos</a>
         </nav>

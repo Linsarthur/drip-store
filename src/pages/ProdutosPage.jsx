@@ -49,10 +49,6 @@ const ProdutosPage = () => {
     }
   }
 
-  console.log(filtroMarca);
-  console.log(filtroCategoria);
-  console.log(filtroGenero);
-  console.log(filtroEstado);
 
   return (
     <div className="xl:px-[100px] xl:pt-[40px] xl:pb-[140px] bg-[#F9F8FE]">
