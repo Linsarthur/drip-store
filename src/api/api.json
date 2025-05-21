@@ -5,7 +5,7 @@
             "nome": "Aquele tênis lá",
             "categoria": "Esportivo",
             "preco": 599.6,
-            "desconto": 30,
+            "desconto": 20,
             "marca": "Adidas",
             "genero": "Masculino",
             "estado": "Novo"
@@ -14,8 +14,8 @@
             "id": 2,
             "nome": "Aquele outro Tênis massa",
             "categoria": "Casual",
-            "preco": 0,
-            "desconto": 30,
+            "preco": 200    ,
+            "desconto":0,
             "marca": "Balenciaga",
             "genero": "Feminino",
             "estado": "Novo"
@@ -25,7 +25,7 @@
             "nome": "Aquele não sei o que jordan",
             "categoria": "Utilitário",
             "preco": 159.99,
-            "desconto": 30,
+            "desconto": 50,
             "marca": "Nike",
             "genero": "Masculino",
             "estado": "Usado"
@@ -35,7 +35,7 @@
             "nome": "K-Swiss V8 - Masculino",
             "categoria": "Corrida",
             "preco": 20,
-            "desconto": 30,
+            "desconto": 5,
             "marca": "Puma",
             "genero": "Unissex",
             "estado": "Novo"
@@ -45,8 +45,8 @@
             "nome": "K-Swiss V8 - Masculino",
             "categoria": "Esportivo",
             "preco": 500,
-            "desconto": 30,
-            "marca": "Adidas",
+            "desconto": 25,
+            "marca": "Nike",
             "genero": "Masculino",
             "estado": "Novo"
         },
@@ -57,7 +57,7 @@
             "preco": 300,
             "desconto": 30,
             "marca": "Adidas",
-            "genero": "Masculino",
+            "genero": "Femino",
             "estado": "Novo"
         }
     ]
