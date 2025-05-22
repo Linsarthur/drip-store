@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { NavLink } from "react-router";
 import carrinho from "../assets/carrinho.png";
 import logo from "../assets/logo.png";
 import lupa from "../assets/lupa.png";
 
 const HeaderNav = () => {
-  const [ativo, setAtivo] = useState("Home")
+ 
   return (
     <>
       <header>
@@ -19,7 +19,7 @@ const HeaderNav = () => {
           </div>
           <div className="acoes">
             <a href="">Cadastre-se</a>
-            <a href="" className="btn">
+            <a href="/auth" className="btn">
               Entrar
             </a>
             <div className="carrinho">
@@ -29,12 +29,10 @@ const HeaderNav = () => {
           </div>
         </div>
         <nav>
-          <a href="/" >
-            Home
-          </a>
-          <a className="active" href="/produtos">Produtos</a>
-          <a href="/categorias">Categorias</a>
-          <a href="/meus-pedidos">Meus Pedidos</a>
+          <NavLink to={"/"}>Home</NavLink>
+          <NavLink to={"/produtos"}>Produtos</NavLink>
+          <NavLink to={"/categorias"}>Produtos</NavLink>
+          <NavLink to={"/meus-pedidos"}>Produtos</NavLink>
         </nav>
       </header>
     </>

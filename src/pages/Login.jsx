@@ -12,8 +12,28 @@ const Login = () => {
               aqui
             </a>
           </p>
-          <label className="block mb-5">Login *</label>
-          <input type="text" placeholder="Insira seu login ou email" className="bg-grafite/5 rounded w-full" />
+          <label className="block mb-1">Login *</label>
+          <input
+            type="text"
+            placeholder="Insira seu login ou email"
+            className="h-[60px] pl-4 mb-5 bg-grafite/5 rounded w-full duration-150 outline-transparent focus:outline-rosa"
+          />
+          <label className="block mb-1">Senha *</label>
+          <input
+            type="password"
+            placeholder="Insira seu login ou email"
+            className="h-[60px] pl-4 mb-[30px] bg-grafite/5 rounded w-full duration-150 outline-transparent focus:outline-rosa"
+          />
+          <a
+            href="/"
+            className="text-grafite underline block mb-[30px] hover:text-rosa"
+          >
+            Esqueci minha senha
+          </a>
+
+          <button className="w-full h-[48px] bg-rosa hover:bg-rosa-hover font-bold rounded text-white cursor-pointer">
+            Acessar conta
+          </button>
         </form>
       </div>
       <div className="hidden"></div>

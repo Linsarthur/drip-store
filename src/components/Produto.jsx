@@ -18,8 +18,16 @@ const Produto = ({ nome, categoria, desconto, preco, marca, genero }) => {
           <h4 className="text-grafite text-[24px] line-clamp-1">{nome}</h4>
 
           <h4 className="text-[24px] font-bold">
-            <del className="text-cinza-claro mr-2 font-light">R$200</del>
-            R${preco}
+            {desconto == 0 ? (
+              <>R${preco}</>
+            ) : (
+              <>
+                <div className="flex">
+                  <del className="text-cinza-claro mr-2 font-light">R$200</del>
+                  <h4 className="text-[24px] font-bold">R${preco}</h4>
+                </div>
+              </>
+            )}
           </h4>
         </div>
       </div>
