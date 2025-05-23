@@ -9,8 +9,9 @@ const LoginProvider = ({ children }) => {
       <LoginContext.Provider value={{ logado, setLogado }}>
         {children}
       </LoginContext.Provider>
-      ;
+   
     </>
+    
   );
 };
 
