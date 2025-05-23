@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router";
+import tenisCosta from "../assets/tenisCosta.png";
+import tenisFrente from "../assets/tenisFrente.png";
 import { LoginContext } from "../context/LoginContext";
 
 const Login = () => {
@@ -14,8 +16,8 @@ const Login = () => {
   }
 
   return (
-    <div>
-      <div className="bg-white p-[30px] rounded xl:w-[580px]">
+    <div className="relative ">
+      <div className="bg-white p-[30px] rounded xl:w-[580px] ">
         <form onSubmit={onLogin}>
           <h4 className="text-center text-[22px] leading-[34px] font-bold xl:text-left xl:mb-5">
             Acesse sua conta
@@ -51,6 +53,11 @@ const Login = () => {
         </form>
       </div>
       <div className="hidden"></div>
+
+      <div className="flex">
+        <img className="absolute top-0 right-72" src={tenisFrente} alt="" />
+        <img className="absolute -bottom-50 right-0" src={tenisCosta} alt="" />
+      </div>
     </div>
   );
 };

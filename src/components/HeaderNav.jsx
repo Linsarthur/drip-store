@@ -3,8 +3,8 @@ import { NavLink } from "react-router";
 import carrinho from "../assets/carrinho.png";
 import logo from "../assets/logo.png";
 import lupa from "../assets/lupa.png";
+import iconeLogado from "../assets/usuarioDaSilva.png";
 import { LoginContext } from "../context/LoginContext";
-
 const HeaderNav = () => {
   const { logado } = useContext(LoginContext);
 
@@ -21,14 +21,30 @@ const HeaderNav = () => {
             <img src={lupa} alt="lupa" />
           </div>
           <div className="acoes">
-            <a href="">Cadastre-se</a>
-            <a href="/auth" className="btn">
-              Entrar
-            </a>
-            <div className="carrinho">
-              <img src={carrinho} alt="carrinho" />
-              <span>2</span>
-            </div>
+            {logado ? (
+              <>
+                <div className="carrinho ">
+                  <img src={carrinho} alt="carrinho" />
+                  <span>2</span>
+                </div>
+
+                <div className="flex items-center gap-2 ml-[40px]">
+                  <img className="" src={iconeLogado} alt="" />
+                  <h6 className=" mt-2">Olá, usuário da silva!</h6>
+                </div>
+              </>
+            ) : (
+              <>
+                <a href="/authCadastro">Cadastre-se</a>
+                <a href="/auth" className="btn">
+                  Entrar
+                </a>
+                <div className="carrinho">
+                  <img src={carrinho} alt="carrinho" />
+                  <span>2</span>
+                </div>
+              </>
+            )}
           </div>
         </div>
         <nav>
