@@ -24,7 +24,7 @@ const Login = () => {
           </h4>
           <p className="mb-[30px] text-grafite text-center xl:text-left">
             Novo Cliente? Então registre-se{" "}
-            <a href="" className="underline hover:text-rosa">
+            <a href="/authCadastro" className="underline hover:text-rosa">
               aqui
             </a>
           </p>
