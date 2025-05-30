@@ -2,7 +2,7 @@
     "produtos": [
         {
             "id": 1,
-            "nome": "Aquele tênis lá",
+            "nome": "K-Swiss V8 - Masculino",
             "categoria": "Esportivo",
             "preco": 599.6,
             "desconto": 20,
@@ -12,7 +12,7 @@
         },
         {
             "id": 2,
-            "nome": "Aquele outro Tênis massa",
+            "nome": "K-Swiss V8 - Masculino",
             "categoria": "Casual",
             "preco": 250    ,
             "desconto":0,
@@ -22,7 +22,7 @@
         },
         {
             "id": 3,
-            "nome": "Aquele não sei o que jordan",
+            "nome": "K-Swiss V8 - Masculino",
             "categoria": "Utilitário",
             "preco": 159.99,
             "desconto": 50,
