@@ -11,17 +11,6 @@ const Produtos = () => {
   const [produtosFiltrados, setProdutosFiltrados] = useState([]);
 
   async function buscarProdutos() {
-    // Requisição Sincrona
-    // fetch("http://localhost:3000/produtos")
-    //     .then(res => res.json())
-    //     .then(res => {
-    //         console.log("produtos: ", res);
-    //     })
-
-    // Requisição Assincrona
-    // const request = await fetch("http://localhost:3000/produtos");
-    // const response = await request.json();
-    // console.log(response);
 
     try {
       const response = await AXIOS.get("/produtos");

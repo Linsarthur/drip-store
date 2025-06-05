@@ -7,6 +7,7 @@ import Cadastro from "../pages/Cadastro";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Notfound from "../pages/NotFound";
+import Produto from "../pages/Produto";
 import Produtos from "../pages/Produtos";
 
 const Paths = () => {
@@ -17,14 +18,14 @@ const Paths = () => {
           <Route path="/" element={<PageLayout />}>
             <Route index element={<Home />} />
             <Route path="/produtos" element={<Produtos />} />
+            <Route path="/produto" element={<Produto />} />
           </Route>
           <Route path="/auth" element={<AuthLayout />}>
             <Route index element={<Login />} />
-           <Route path="/auth/cadastro" element={<Cadastro />} />
+            <Route path="/auth/cadastro" element={<Cadastro />} />
           </Route>
-           <Route path="/authCadastro" element={<RegisterLayout />}>
+          <Route path="/authCadastro" element={<RegisterLayout />}>
             <Route index element={<Cadastro />} />
-           
           </Route>
           <Route path="/*" element={<Notfound />} />
         </Routes>
